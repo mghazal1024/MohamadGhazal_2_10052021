@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: red;
+}
+
+/*-------TABLET-----------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    body {
+        background-color: green;
+    }
+
+}
+
+
+/*--------DESKTOP----------------*/
+@media screen and (min-width: 1024px) {
+
+    body {
+        background-color: blue;
+    }
+
+}
+
+
