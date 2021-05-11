@@ -310,17 +310,51 @@ main {
 
 /*----------ACTIVITES------------*/
 
-
-/* #activites {
+#activites {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    padding: 0 30px;
 }
 #activites ul.simplified-thumbnails-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-} */
+    flex-flow: column wrap;
+}
+#activites ul.simplified-thumbnails-container li {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-top: 30px;
+}
+
+#activites ul.simplified-thumbnails-container li a {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#activites ul.simplified-thumbnails-container li a .image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#activites ul.simplified-thumbnails-container li a .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#activites ul.simplified-thumbnails-container li a p {
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+    bottom: 0;
+}
+
+
 
 
 /*-----------------------------------------------QUERIES------------------------------------------/*
@@ -465,25 +499,26 @@ main {
     /*----------ACTIVITES------------*/
     
     #activites {
-        width: 100%;
+        /* width: 100%; */
         padding: 0 50px;
     }
     #activites ul.simplified-thumbnails-container {
-        width: 100%;
+        /* width: 100%; */
         height: 500px;
-        display: flex;
-        flex-flow: column wrap;
+        /* display: flex; */
+        /* flex-flow: column wrap; */
         align-content: space-between;
         justify-content: space-between;
         padding: 30px 0;
     }
     #activites ul.simplified-thumbnails-container li {
         width: 23%;
-        display: flex;
-        position: relative;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        /* display: flex; */
+        /* position: relative; */
+        /* border-radius: 20px; */
+        /* overflow: hidden; */
+        /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
+        margin-top: 0;
     }
     #activites ul.simplified-thumbnails-container li.full-height {
         height: 100%;
@@ -498,27 +533,27 @@ main {
         height: calc(40% - 20px);
     }
     #activites ul.simplified-thumbnails-container li a {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+        /* width: 100%; */
+        /* height: 100%; */
+        /* overflow: hidden; */
     }
     #activites ul.simplified-thumbnails-container li a .image-container {
-        width: 100%;
-        height: 100%;
-        position: relative
+        /* width: 100%; */
+        /* height: 100%; */
+        /* position: relative; */
     }
     #activites ul.simplified-thumbnails-container li a .image-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        /* width: 100%; */
+        /* height: 100%; */
+        /* object-fit: cover; */
     }
     #activites ul.simplified-thumbnails-container li a p {
         padding: 20px;
-        position: absolute;
-        width: 100%;
-        background-color: white;
-        z-index: 10;
-        bottom: 0;
+        /* position: absolute; */
+        /* width: 100%; */
+        /* background-color: white; */
+        /* z-index: 10; */
+        /* bottom: 0; */
     }
 
    
