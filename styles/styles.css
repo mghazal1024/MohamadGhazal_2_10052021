@@ -226,118 +226,91 @@ nav ul li:hover a {
 /*----------HEBERGEMENTS------------*/
 
 main {
+    width: 100%;
+    padding: 0px;
     display: flex;
     flex-direction: column;
 }
-#hebergements, #populaires {
-    padding: 30px;
-}
+
 #hebergements {
+    padding: 30px;
     order: 1;
-    background-color: white;
 }
-#hebergements h2 {
-    padding-bottom: 20px;
-}
-#populaires {
-    background-color: #F2F2F2;
-}
-
-
-.portrait-thumbnails-container {
+#hebergements ul.portrait-thumbnails-container {
     display: flex;
-    flex-wrap: wrap;
-}
-.portrait-thumbnails-container li {
     width: 100%;
-    border: 3px solid white;
-    display: flex;
+    flex-direction: column;
+    padding: 30px 0 0 0;
+}
+#hebergements ul.portrait-thumbnails-container li {
+    width: 100%;
     margin-bottom: 30px;
+}
+#hebergements ul.portrait-thumbnails-container li a {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 3px solid white;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
-.portrait-thumbnails-container li a {
+#hebergements ul.portrait-thumbnails-container li a .image-container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    height: 130px;
 }
-.image-container {
-    width: 100%;
-    height: 120px;
-}
-.image-container img {
+#hebergements ul.portrait-thumbnails-container li a .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: bottom;
 }
-
-.thumbnail-info-container {
-    background-color: white;
-    width: 100%;
+#hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container {
     padding: 10px;
 }
 
-.landscape-thumbnails-container {
-    display: flex;
-    flex-wrap: wrap;
-}
-.landscape-thumbnails-container li {
-    display: flex;
-    width: 100%;
-    margin-bottom: 30px;
-    border-radius: 20px;
-    border: 3px solid white;
-    overflow: hidden;
-    box-shadow: 0 0 15px rgba(0,0,0,0.3);
-}
-.landscape-thumbnails-container li a {
-    display: flex;
-    width: 100%;
-}
-.landscape-thumbnails-container li a .image-container {
-    width: 30%
-}
-.landscape-thumbnails-container li a .thumbnail-info-container {
-    width: 70%;
-}
 
-.title-icon-container {
+#populaires {
+    padding: 30px;
+    background-color: #F2F2F2;
+    width: 100%;
+}
+#populaires ul.landscape-thumbnails-container {
     display: flex;
-    align-items: baseline;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+#populaires ul.landscape-thumbnails-container li {
+    width: 100%;
+    margin-top: 30px;
+}
+#populaires ul.landscape-thumbnails-container li a {
+    width: 100%;
+    height: 120px;
+    display: flex;
     justify-content: space-between;
-    padding-bottom: 20px;
+    border: 3px solid white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#populaires ul.landscape-thumbnails-container li a .image-container {
+    width: 40%;
+}
+#populaires ul.landscape-thumbnails-container li a .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#populaires ul.landscape-thumbnails-container li a .thumbnail-info-container {
+    width: 60%;
+    padding: 10px;
+    background-color: white;
 }
 
 /*----------ACTIVITES------------*/
 
-#activites {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-}
-.simplified-thumbnails-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.simplified-thumbnails-container li {
-    width: 100%;
-    display: flex;
-    margin-bottom: 30px;
-}
-.simplified-thumbnails-container li a {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.simplified-thumbnails-container li a img {
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-}
+
 
 
 /*-----------------------------------------------QUERIES------------------------------------------/*
@@ -445,36 +418,39 @@ main {
     /*----------HEBERGEMENTS------------*/
     
     main {
+        width: 100%;
+        padding: 50px;
         display: flex;
         flex-direction: column;
-        padding: 0 50px;
     }
-    
-    #hebergements, #populaires {
+        
+    #hebergements {
         padding: 50px;
         background-color: #F2F2F2;
+        width: 100%;
+        order: 0;
+        border-radius: 20px;
+        margin-right: 40px;
+    }
+    #hebergements ul.portrait-thumbnails-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #hebergements ul.portrait-thumbnails-container li {
+        width: 30%;
+    }
+
+    
+    
+    
+    #populaires {
+        padding: 50px;
+        background-color: #F2F2F2;
+        width: 100%;
         border-radius: 20px;
     }
-    #hebergements {
-        order: 0;
-        margin-bottom: 50px;
-    }
     
-    .portrait-thumbnails-container {
-        justify-content: space-between;
-    }
-    .portrait-thumbnails-container li {
-        width: 30%;
-    }
-    
-    .landscape-thumbnails-container {
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .landscape-thumbnails-container li {
-        width: 30%;
-    }
 
     /*----------ACTIVITES------------*/
 
@@ -497,21 +473,26 @@ main {
 
 
     /*----------HEBERGEMENTS------------*/
-
-    main {
-        display: flex;
-        flex-direction: row;
-        padding: 0 50px;
-    }
-    #hebergements {
-        margin-right: 40px;
-        margin-bottom: 0;
-    }
     
-    .landscape-thumbnails-container li {
-        width: 100%;
+    main {
+        flex-direction: row;
+    }
+        
+    #hebergements {
+        width: 70%;
+    }
+    #hebergements ul.portrait-thumbnails-container li {
+        width: 30%;
     }
 
+    
+    
+    
+    #populaires {
+        width: 30%;
+    }
+
+    
 }
 
 
