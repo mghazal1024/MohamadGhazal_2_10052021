@@ -130,7 +130,6 @@ nav ul li:hover a {
     align-items: flex-start;
     padding: 30px;
 }
-
 #search-and-filter form {
     display: flex;
     width: 100%;
@@ -155,7 +154,6 @@ nav ul li:hover a {
     font-weight: 700;
     display: flex;
 }
-
 #search-and-filter form button.mobile-only {
     border: 0;
     background-color: #0065FC;
@@ -169,12 +167,12 @@ nav ul li:hover a {
     cursor: pointer;
 }
 
-
 #filter-container {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 30px 0;
 }
-
 #filter-container > p {
     width: 100%;
 }
@@ -182,9 +180,53 @@ nav ul li:hover a {
     display: flex;
     flex-wrap: wrap;
 }
+.filter-option {
+    height: 50px;
+    display: flex;
+    margin: 10px 10px 10px 0;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
+}
+.filter-option button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+.filter-option button i {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    border-radius: 25px;
+    transform: translateX(-2px);
+}
+.filter-option button p {
+    padding: 0 15px;
+}
 
 .additional-info-container {
     display: flex;
+    align-items: flex-start;
+}
+.additional-info-container i {
+    border: 1px solid #F2F2F2;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    border-radius: 13px;
+    font-size: 0.8em;
+}
+.additional-info-container p {
+    margin-left: 10px;
+    width: 100%;
 }
 
 
@@ -242,7 +284,7 @@ main, section {
     }
 
     #search-and-filter form {
-        margin: 20px 0;
+        margin: 20px 0 30px 0;
         width: auto;
     }
 
@@ -272,6 +314,25 @@ main, section {
 
     #filter-container > p {
         width: auto;
+    }
+
+    .filter-option:nth-child(1) {
+        margin-left: 15px;
+    }
+
+    .filter-option {
+        margin: 0 15px 0 0;
+        transition: ease-in-out 300ms;
+    }
+    .filter-option:hover {
+        border: 2px solid #0065FC;
+    }
+    .filter-option button i {
+        transition: ease-in-out 300ms;
+    }
+    .filter-option:hover button i {
+        background-color: #0065FC;
+        color: white;
     }
 
 }
