@@ -29,7 +29,8 @@
             <form>
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="text" name="search" />
-                <button type="submit">Rechercher</button>
+                <button class="hidden-on-mobile" type="submit">Rechercher</button>
+                <button class="mobile-only" type="submit"><i class="fas fa-search"></i></button>
             </form>
             <div id="filter-container">
                 <p><strong>Filtres</strong></p>
@@ -37,25 +38,25 @@
                     <li class="filter-option">
                         <button>
                             <i class="fas fa-money-bill-wave-alt"></i>
-                            Économique
+                            <p><strong>Économique</strong></p>
                         </button>
                     </li>
                     <li class="filter-option">
                         <button>
                             <i class="fas fa-child"></i>
-                            Familial
+                            <p><strong>Familial</strong></p>
                         </button>
                     </li>
                     <li class="filter-option">
                         <button>
                             <i class="fas fa-heart"></i>
-                            Romantique
+                            <p><strong>Romantique</strong></p>
                         </button>
                     </li>
                     <li class="filter-option">
                         <button>
                             <i class="fas fa-dog"></i>
-                            Animaux autorisés
+                            <p><strong>Animaux autorisés</strong></p>
                         </button>
                     </li>
                 </ul>
@@ -66,15 +67,15 @@
             </div>
         </section>
         <main>
-            <article>
+            <article id="hebergements">
                 <h2>Hébergements à Marseille</h2>
                 <ul class="portrait-thumbnails-contianer">
                    <li>
                        <a href="#">
                            <img src="images/hebergements/auberge-la-cannebiere.jpg" alt="Auberge la Cannebiere"/>
                            <div class="thumbnail-info-container">
-                                <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                 <div class="rating-container">
                                     <i class="fas fa-star active"></i>
                                     <i class="fas fa-star active"></i>
@@ -89,8 +90,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-du-port.jpg" alt="Hotel du port chambre"/>
                             <div class="thumbnail-info-container">
-                                <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                 <div class="rating-container">
                                     <i class="fas fa-star active"></i>
                                     <i class="fas fa-star active"></i>
@@ -105,8 +106,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-les-mouettes.jpg" alt="Hotel Les Mouettes chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                      <i class="fas fa-star active"></i>
                                      <i class="fas fa-star active"></i>
@@ -121,8 +122,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-de-la-mer.jpg" alt="Hotel de la mer chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                      <i class="fas fa-star active"></i>
                                      <i class="fas fa-star active"></i>
@@ -137,8 +138,8 @@
                         <a href="#">
                             <img src="images/hebergements/auberge-le-panier.jpg" alt="Auberge le Panier chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                      <i class="fas fa-star active"></i>
                                      <i class="fas fa-star active"></i>
@@ -153,8 +154,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-chez-amina.jpg" alt="Hotel chez anima chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p"><strong>Auberge la Cannebiere</strong></p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                      <i class="fas fa-star active"></i>
                                      <i class="fas fa-star active"></i>
@@ -178,8 +179,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-le-soleil-du-matin.jpg" alt="Hotel le soleil du matin chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p">Auberge la Cannebiere</p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                     <i class="fas fa-star active"></i>
                                     <i class="fas fa-star active"></i>
@@ -194,8 +195,8 @@
                         <a href="#">
                             <img src="images/hebergements/au-coeur-de-l'eau-chambres-dhotes.jpg" alt="Au coeur de l'eau chambres d'hotes"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p">Auberge la Cannebiere</p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                     <i class="fas fa-star active"></i>
                                     <i class="fas fa-star active"></i>
@@ -210,8 +211,8 @@
                         <a href="#">
                             <img src="images/hebergements/hotel-tout-bleu-et-blanc.jpg" alt="Hotel tout blue et blanc chambre"/>
                             <div class="thumbnail-info-container">
-                                 <p class="thumbnail-title">Auberge la Cannebiere</p>
-                                 <p class="thumbnail-subtitle">Nuit a partir de <strong>25€</strong></p>
+                                 <p class="small-p">Auberge la Cannebiere</p>
+                                 <p class="small-p">Nuit a partir de <strong>25€</strong></p>
                                  <div class="rating-container">
                                     <i class="fas fa-star active"></i>
                                     <i class="fas fa-star active"></i>
@@ -231,37 +232,37 @@
                 <li>
                     <a href="#">
                         <img src="images/activites/vieux-port.jpg" alt="Vieux port Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/activites/fort-de-pomegues.jpg" alt="Fort de Pomegues Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/activites/iles-du-frioul.jpg" alt="Iles du frioul Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/activites/parc-national-des-calanques.jpg" alt="Parc national des calanques Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/activites/notre-dame-de-la-garde.jpg" alt="Notre dame de la garde Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
                 <li>
                     <a href="#">
                         <img src="images/activites/parc-longchamp.jpg" alt="Parc longchamp Activité"/>
-                        <p class="thumbnail-title">Auberge la Cannebiere</p>
+                        <p class="small-p">Auberge la Cannebiere</p>
                     </a>
                 </li>
             </ul>

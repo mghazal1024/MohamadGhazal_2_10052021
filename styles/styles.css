@@ -4,10 +4,21 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
+.hidden-on-mobile {
+    display: none;
+}
+
+.mobile-only {
+    display: flex;
+}
 /*----------TYPOGRAPHY------------*/
 
 a {
-    font-family: "Raleway", "sans-serif";
+    font-family: "Raleway", sans-serif;
     font-weight: 500;
     text-decoration: none;
     color: #000000;
@@ -15,16 +26,51 @@ a {
     line-height: 20px
 }
 header > a {
-    color: #1165FB;
+    color: #0065FC;
     font-weight: 700;
 }
 
 header > a:hover {
     text-decoration: underline;
 }
+
+
+h3, h2, p {
+    color: black;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+    line-height: 1.3em;
+}
+
+p, strong, p.small-p {
+    font-size: 1.1em;
+    line-height: 1.4em;
+    font-weight: 300;
+}
+strong {
+    font-weight: 700;
+}
+
+p.small-p {
+    /* font-size: 14px; */
+    font-size: 0.9em;
+    line-height: 1em;
+}
+
+
 /*---------------------------------*/
 
 
+/* section, main {
+    padding: 20px;
+}
+
+article, aside {
+    padding: 0;
+} */
+
+
+/*----------HEADER------------*/
 
 
 header {
@@ -50,7 +96,6 @@ nav {
 nav ul {
     width: 100%;
     display: flex;
-    list-style: none;
     justify-content: space-evenly;
 }
 nav ul li {
@@ -65,18 +110,99 @@ nav ul li a {
     text-align: center
 }
 nav ul li:hover {
-    border-bottom: 3px solid #1165FB;
+    border-bottom: 3px solid #0065FC;
 }
 nav ul li:hover a {
-    color: #1165FB;
+    color: #0065FC;
 }
 
 
+/*----------------------------*/
 
 
+
+/*----------SEARCH AND FILTER AREA------------*/
+
+#search-and-filter {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+#search-and-filter form {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    overflow: hidden;
+    justify-content: space-between;
+}
+#search-and-filter form > i {
+    width: 50px;
+    height: 50px;
+    padding: 0 20px;
+    background-color: #F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search-and-filter form input {
+    border: 0;
+    font-weight: 700;
+    display: flex;
+}
+
+#search-and-filter form button.mobile-only {
+    border: 0;
+    background-color: #0065FC;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+#filter-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filter-container > p {
+    width: 100%;
+}
+#filter-container ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.additional-info-container {
+    display: flex;
+}
+
+
+main, section {
+    overflow: hidden;
+}
+
+/*-----------------------------------------------QUERIES------------------------------------------/*
 /*-------TABLET-----------*/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
 
+    .mobile-only {
+        display: none;
+    }
+
+    .hidden-on-mobile {
+        display: flex;
+    }
     
     header {
         flex-wrap: nowrap;
@@ -103,10 +229,50 @@ nav ul li:hover a {
     }
     nav ul li:hover {
         border-bottom: 0;
-        border-top: 3px solid #1165FB;
+        border-top: 3px solid #0065FC;
     }
+
     
     
+
+    /*----------SEARCH AND FILTER AREA------------*/
+
+    #search-and-filter {
+        padding: 30px 50px;
+    }
+
+    #search-and-filter form {
+        margin: 20px 0;
+        width: auto;
+    }
+
+    #search-and-filter form input {
+        padding: 0 20px;
+    }
+
+    #search-and-filter form button.hidden-on-mobile {
+        border: 0;
+        background-color: #0065FC;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+        color: white;
+        cursor: pointer;
+    }
+    #search-and-filter form button.hidden-on-mobile:hover {
+        background-color: #DEEBFF;
+        color: #0065FC;
+    }
+
+    #search-and-filter form button.mobile-only {
+        display: none;
+    }
+
+
+    #filter-container > p {
+        width: auto;
+    }
 
 }
 
@@ -115,31 +281,11 @@ nav ul li:hover a {
 @media screen and (min-width: 1024px) {
 
     header {
-        flex-wrap: nowrap;
-        justify-content: flex-end;
         padding: 0 50px;
     }
-    header > a {
-        padding: 0 25px;
-    }
 
-    #logo-container {
-        width: 100%;
-        padding: 0;
-    }
-    
-    nav {
-        width: auto;
-        order: 0;
-    }
     nav ul li {
         padding: 50px 25px;
-        border-bottom: 0;
-        border-top: 3px solid #F2F2F2;
-    }
-    nav ul li:hover {
-        border-bottom: 0;
-        border-top: 3px solid #1165FB;
     }
 
 }
