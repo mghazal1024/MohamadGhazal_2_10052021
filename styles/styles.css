@@ -22,8 +22,8 @@ a {
     font-weight: 500;
     text-decoration: none;
     color: #000000;
-    font-size: 17px;
-    line-height: 20px
+    font-size: 1em;
+    line-height: 1.1em;
 }
 .bold-link {
     font-weight: 700;
@@ -43,6 +43,7 @@ h3, h2, p {
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
     line-height: 1.3em;
+    padding-bottom: 5px;
 }
 
 h3 {
@@ -216,9 +217,6 @@ nav ul li:hover a {
     transform: translateX(-2px);
     margin-right: 10px;
 }
-/* .filter-option button p {
-    padding: 0 15px;
-} */
 
 .additional-info-container {
     display: flex;
@@ -254,6 +252,8 @@ main {
 #hebergements {
     padding: 50px 30px;
     order: 1;
+    display: flex;
+    flex-flow: row wrap;
 }
 #hebergements ul.portrait-thumbnails-container {
     display: flex;
@@ -276,7 +276,8 @@ main {
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container {
     width: 100%;
-    height: 130px;
+    height: 100%;
+    max-height: 130px;
     overflow: hidden;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container img {
@@ -357,7 +358,7 @@ main {
 }
 #activites ul.simplified-thumbnails-container li {
     width: 100%;
-    height: 130px;
+    height: 200px;
     display: flex;
     position: relative;
     border-radius: 20px;
@@ -419,12 +420,6 @@ footer ul li {
     padding: 5px 0;
 }
 
-.reference-image {
-    width: 100%;
-    position: absolute;
-    z-index: 20;
-    opacity: 0.4;
-}
 
 /*-----------------------------------------------QUERIES------------------------------------------/*
 /*-------TABLET-----------*/
@@ -449,7 +444,10 @@ footer ul li {
     
     #logo-container {
         width: 100%;
-        padding: 0;;
+        height: 100%;
+        padding: 17px 0 0 0;
+        display: flex;
+        align-items: flex-end;
     }
     
     nav {
@@ -554,19 +552,20 @@ footer ul li {
         width: 30%;
         transition: ease-in-out 100ms;
     }
-    /* #hebergements ul.portrait-thumbnails-container li:hover {
-        transform: scale(1.1);
-    } */
+    #hebergements ul.portrait-thumbnails-container li a {
+        height: 100%;
+    }
+    #hebergements > a {
+        align-self: flex-end;
+    }
 
-    /* #hebergements ul.portrait-thumbnails-container li:hover a .image-container img {
-        transform: scale(1.1);
-    } */
 
     
     
     
     #populaires {
         padding: 50px;
+        margin-top: 50px;
         background-color: #F2F2F2;
         width: 100%;
         border-radius: 20px;
@@ -575,11 +574,112 @@ footer ul li {
 
     /*----------ACTIVITES------------*/
     
+
+
     #activites {
         padding: 0 50px;
     }
     #activites ul.simplified-thumbnails-container {
-        height: 500px;
+        height: 800px;
+        flex-flow: column wrap;
+        align-content: space-between;
+        justify-content: space-between;
+        padding: 30px 0 50px 0;
+    }
+    #activites ul.simplified-thumbnails-container li {
+        width: calc(50% - 10px);
+        margin-top: 0;
+    }
+    #activites ul.simplified-thumbnails-container li.full-height {
+        height: 50%;
+    }
+    #activites ul.simplified-thumbnails-container li.half-height {
+        height: calc(25% - 20px);
+    }
+    #activites ul.simplified-thumbnails-container li.two-height {
+        height: calc(30% - 20px);
+    }
+    #activites ul.simplified-thumbnails-container li.one-height {
+        height: calc(20% - 20px);
+    }
+    #activites ul.simplified-thumbnails-container li a p {
+        padding: 10px;
+    }
+    
+    /* #activites ul.simplified-thumbnails-container li:nth-child(3) {
+        order: -1;
+    } */
+    
+    
+    /*-----------FOOTER------------------*/
+
+    footer {
+        padding: 20px 50px 50px 50px;
+        flex-direction: row;
+    }
+   
+
+}
+
+
+
+/*--------DESKTOP----------------*/
+@media screen and (min-width: 1024px) {
+
+    header {
+        padding: 0 50px;
+    }
+
+    nav ul li {
+        padding: 45px 35px;
+    }
+
+
+    /*----------HEBERGEMENTS------------*/
+    
+    main {
+        flex-direction: row;
+        align-items: stretch;
+    }
+        
+    #hebergements {
+        width: 70%;
+    }
+    #hebergements ul.portrait-thumbnails-container li {
+        width: 30%;
+    }
+
+    
+    #populaires {
+        width: 30%;
+        margin-top: 0;
+        padding: 50px;
+    }
+
+    #populaires ul.landscape-thumbnails-container {
+        padding: 15px 0;
+    }
+    #populaires ul.landscape-thumbnails-container li {
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin: 15px 0;
+    }
+    #populaires ul.landscape-thumbnails-container li a {
+        height: 100%;
+    }
+
+
+    /* #activites ul.simplified-thumbnails-container {
+        height: 600px;
+    } */
+
+
+    #activites {
+        padding: 0 50px;
+    }
+    #activites ul.simplified-thumbnails-container {
+        height: 600px;
+        flex-flow: column wrap;
         align-content: space-between;
         justify-content: space-between;
         padding: 30px 0 50px 0;
@@ -603,53 +703,7 @@ footer ul li {
     #activites ul.simplified-thumbnails-container li a p {
         padding: 20px;
     }
-    
-    
-    /*-----------FOOTER------------------*/
-
-    footer {
-        padding: 20px 50px 50px 50px;
-        flex-direction: row;
-    }
-   
-
-}
-
-
-
-/*--------DESKTOP----------------*/
-@media screen and (min-width: 1024px) {
-
-    header {
-        padding: 0 50px;
-    }
-
-    nav ul li {
-        padding: 50px 25px;
-    }
-
-
-    /*----------HEBERGEMENTS------------*/
-    
-    main {
-        flex-direction: row;
-    }
-        
-    #hebergements {
-        width: 70%;
-    }
-    #hebergements ul.portrait-thumbnails-container li {
-        width: 30%;
-    }
-
-    
-    
-    
-    #populaires {
-        width: 30%;
-    }
 
     
 }
-
 
