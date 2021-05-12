@@ -25,6 +25,9 @@ a {
     font-size: 17px;
     line-height: 20px
 }
+.bold-link {
+    font-weight: 700;
+}
 header > a {
     color: #0065FC;
     font-weight: 700;
@@ -40,6 +43,11 @@ h3, h2, p {
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
     line-height: 1.3em;
+}
+
+h3 {
+    font-size: 1.3em;
+    line-height: 1.1em;
 }
 
 p, strong, p.small-p {
@@ -244,7 +252,7 @@ main {
 }
 
 #hebergements {
-    padding: 30px;
+    padding: 50px 30px;
     order: 1;
 }
 #hebergements ul.portrait-thumbnails-container {
@@ -289,7 +297,7 @@ main {
 
 
 #populaires {
-    padding: 30px;
+    padding: 50px 30px;
     background-color: #F2F2F2;
     width: 100%;
 }
@@ -339,12 +347,13 @@ main {
 
 #activites {
     width: 100%;
-    padding: 0 30px;
+    padding: 50px 30px;
 }
 #activites ul.simplified-thumbnails-container {
     width: 100%;
     display: flex;
     flex-flow: column wrap;
+    /* padding-bottom: 50px; */
 }
 #activites ul.simplified-thumbnails-container li {
     width: 100%;
@@ -391,6 +400,31 @@ main {
     font-size: 0.8em;
 }
 
+
+/*-----------FOOTER------------------*/
+
+footer {
+    width: 100%;
+    padding: 0 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+}
+
+footer ul {
+    width: 100%;
+    padding-top: 30px;
+}
+footer ul li {
+    padding: 5px 0;
+}
+
+.reference-image {
+    width: 100%;
+    position: absolute;
+    z-index: 20;
+    opacity: 0.4;
+}
 
 /*-----------------------------------------------QUERIES------------------------------------------/*
 /*-------TABLET-----------*/
@@ -524,9 +558,9 @@ main {
         transform: scale(1.1);
     } */
 
-    #hebergements ul.portrait-thumbnails-container li:hover a .image-container img {
+    /* #hebergements ul.portrait-thumbnails-container li:hover a .image-container img {
         transform: scale(1.1);
-    }
+    } */
 
     
     
@@ -548,7 +582,7 @@ main {
         height: 500px;
         align-content: space-between;
         justify-content: space-between;
-        padding: 30px 0;
+        padding: 30px 0 50px 0;
     }
     #activites ul.simplified-thumbnails-container li {
         width: 23%;
@@ -569,7 +603,14 @@ main {
     #activites ul.simplified-thumbnails-container li a p {
         padding: 20px;
     }
+    
+    
+    /*-----------FOOTER------------------*/
 
+    footer {
+        padding: 20px 50px 50px 50px;
+        flex-direction: row;
+    }
    
 
 }
