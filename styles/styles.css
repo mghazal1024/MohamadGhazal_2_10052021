@@ -220,7 +220,10 @@ nav ul li:hover a {
 
 .additional-info-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+}
+.additional-info-container p {
+    padding: 0;
 }
 .additional-info-container i {
     border: 1px solid #F2F2F2;
@@ -306,6 +309,9 @@ main {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
+}
+#populaires .title-icon-container i {
+    font-size: 1.5em;
 }
 #populaires ul.landscape-thumbnails-container {
     display: flex;
@@ -551,12 +557,20 @@ footer ul li {
     #hebergements ul.portrait-thumbnails-container li {
         width: 30%;
         transition: ease-in-out 100ms;
+        transition: ease-in-out 100ms;
     }
     #hebergements ul.portrait-thumbnails-container li a {
         height: 100%;
     }
     #hebergements > a {
         align-self: flex-end;
+    }
+    #hebergements > a:hover {
+        text-decoration: underline;
+    }
+
+    #hebergements ul.portrait-thumbnails-container li:hover {
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
 
@@ -569,6 +583,12 @@ footer ul li {
         background-color: #F2F2F2;
         width: 100%;
         border-radius: 20px;
+    }
+    #populaires ul.landscape-thumbnails-container li {
+        transition: ease-in-out 100ms;
+    }
+    #populaires ul.landscape-thumbnails-container li:hover {
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
     
 
@@ -589,6 +609,10 @@ footer ul li {
     #activites ul.simplified-thumbnails-container li {
         width: calc(50% - 10px);
         margin-top: 0;
+        transition: ease-in-out 100ms;
+    }
+    #activites ul.simplified-thumbnails-container li:hover {
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
     #activites ul.simplified-thumbnails-container li.full-height {
         height: 50%;
@@ -616,6 +640,10 @@ footer ul li {
     footer {
         padding: 20px 50px 50px 50px;
         flex-direction: row;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
     }
    
 
