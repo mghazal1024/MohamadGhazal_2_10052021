@@ -299,11 +299,12 @@ main {
     background-color: white;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container {
-    max-height: 130px;
+    height: 200px;
     overflow: hidden;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container img {
     object-fit: cover;
+    object-position: bottom center;
     transition: ease-in-out 100ms;
 }
 #hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container {
@@ -330,6 +331,7 @@ main {
     width: 100%;
 }
 #populaires ul.landscape-thumbnails-container,
+#populaires ul.landscape-thumbnails-container li a .image-container,
 #populaires ul.landscape-thumbnails-container li a .image-container img,
 #populaires ul.landscape-thumbnails-container li a .thumbnail-info-container {
     height: 100%;
@@ -399,7 +401,7 @@ main {
     flex-flow: column wrap;
 }
 #activites ul.simplified-thumbnails-container li {
-    height: 200px;
+    height: 250px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
@@ -579,6 +581,9 @@ footer ul li {
     }
     #hebergements ul.portrait-thumbnails-container li a {
         height: 100%;
+    }
+    #hebergements ul.portrait-thumbnails-container li a .image-container {
+        height: 130px;
     }
     #hebergements > a {
         align-self: flex-end;
