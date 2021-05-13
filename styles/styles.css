@@ -15,8 +15,9 @@ ul {
 .mobile-only {
     display: flex;
 }
-/*----------TYPOGRAPHY------------*/
 
+
+/*---TYPOGRAPHY-------------------------------------------------------*/
 a {
     font-family: "Raleway", sans-serif;
     font-weight: 500;
@@ -61,13 +62,10 @@ strong {
 }
 
 p.small-p {
-    /* font-size: 14px; */
     font-size: 0.9em;
     line-height: 1em;
 }
 
-
-/*---------------------------------*/
 
 .active-rating {
     color: #0065FC;
@@ -76,8 +74,9 @@ p.small-p {
     color: #F2F2F2;
 }
 
-/*----------HEADER------------*/
 
+
+/*---HEADER-------------------------------------------------------*/
 
 header {
     display: flex;
@@ -123,80 +122,90 @@ nav ul li:hover a {
 }
 
 
-/*----------------------------*/
 
+/*---SEARCH AND FILTER AREA-------------------------------------------------------*/
 
-
-/*----------SEARCH AND FILTER AREA------------*/
-
-#search-and-filter {
+#search-and-filter,
+#search-and-filter form,
+#search-and-filter form > i,
+#search-and-filter form input,
+#search-and-filter form button.mobile-only {
     display: flex;
     width: 100%;
+}
+#search-and-filter form,
+#search-and-filter form button.mobile-only {
+    border-radius: 15px;
+}
+#search-and-filter form > i,
+#search-and-filter form button.mobile-only {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+#search-and-filter form input,
+#search-and-filter form button.mobile-only {
+    border: 0;
+}
+#search-and-filter {
     flex-direction: column;
     align-items: flex-start;
     padding: 30px;
 }
 #search-and-filter form {
-    display: flex;
-    width: 100%;
-    height: 50px;
     margin: 30px 0;
     border: 1px solid #F2F2F2;
-    border-radius: 15px;
     overflow: hidden;
     justify-content: space-between;
 }
 #search-and-filter form > i {
-    width: 50px;
-    height: 50px;
     padding: 0 20px;
     background-color: #F2F2F2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 #search-and-filter form input {
-    border: 0;
+    width: auto;
     font-weight: 700;
-    display: flex;
 }
-
 #search-and-filter form button.mobile-only {
-    border: 0;
     background-color: #0065FC;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
-    border-radius: 15px;
     cursor: pointer;
 }
 
-#filter-container {
+
+#filter-container,
+#filter-container ul,
+.filter-option,
+.filter-option button,
+.filter-option button i {
     display: flex;
+}
+#filter-container,
+#filter-container ul {
     flex-wrap: wrap;
+}
+#filter-container,
+#filter-container button,
+#filter-container button i {
     align-items: center;
+}
+#filter-container {
     margin: 0 0 30px 0;
 }
 #filter-container > p {
     width: 100%;
 }
-#filter-container ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-.filter-option {
+.filter-option,
+.filter-option button i {
     height: 50px;
-    display: flex;
-    margin: 10px 10px 10px 0;
-    border: 2px solid #F2F2F2;
     border-radius: 25px;
 }
+.filter-option {
+    margin: 10px 10px 10px 0;
+    border: 2px solid #F2F2F2;
+}
 .filter-option button {
-    display: flex;
-    align-items: center;
     background-color: transparent;
     border: 0;
     cursor: pointer;
@@ -207,18 +216,16 @@ nav ul li:hover a {
 }
 .filter-option button i {
     width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     color: #0065FC;
     background-color: #DEEBFF;
-    border-radius: 25px;
     transform: translateX(-2px);
     margin-right: 10px;
 }
 
-.additional-info-container {
+
+.additional-info-container,
+.additional-info-container i {
     display: flex;
     align-items: center;
 }
@@ -229,8 +236,6 @@ nav ul li:hover a {
     border: 1px solid #F2F2F2;
     width: 26px;
     height: 26px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     color: #0065FC;
     border-radius: 13px;
@@ -243,7 +248,7 @@ nav ul li:hover a {
 
 
 
-/*----------HEBERGEMENTS------------*/
+/*---MAIN-------------------------------------------------------*/
 
 main {
     width: 100%;
@@ -252,20 +257,38 @@ main {
     flex-direction: column;
 }
 
+/*---MAIN - Hebergements-------------------------------------------------------*/
+
+#hebergements,
+#hebergements ul.portrait-thumbnails-container,
+#hebergements ul.portrait-thumbnails-container li a,
+#hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container {
+    display: flex;
+}
+#hebergements ul.portrait-thumbnails-container,
+#hebergements ul.portrait-thumbnails-container li,
+#hebergements ul.portrait-thumbnails-container li a .image-container,
+#hebergements ul.portrait-thumbnails-container li a .image-container img {
+    width: 100%;
+}
+#hebergements ul.portrait-thumbnails-container,
+#hebergements ul.portrait-thumbnails-container li a,
+#hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container {
+    flex-direction: column;
+}
+#hebergements ul.portrait-thumbnails-container li a .image-container,
+#hebergements ul.portrait-thumbnails-container li a .image-container img {
+    height: 100%;
+}
 #hebergements {
     padding: 50px 30px;
     order: 1;
-    display: flex;
     flex-flow: row wrap;
 }
 #hebergements ul.portrait-thumbnails-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
     padding: 30px 0 0 0;
 }
 #hebergements ul.portrait-thumbnails-container li {
-    width: 100%;
     margin-bottom: 30px;
     border: 3px solid white;
     border-radius: 20px;
@@ -273,40 +296,49 @@ main {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 #hebergements ul.portrait-thumbnails-container li a {
-    display: flex;
-    flex-direction: column;
     background-color: white;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container {
-    width: 100%;
-    height: 100%;
     max-height: 130px;
     overflow: hidden;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
     transition: ease-in-out 100ms;
 }
 #hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container {
     padding: 10px;
-    display: flex;
-    flex-direction: column;
     justify-content: flex-start;
 }
 #hebergements ul.portrait-thumbnails-container li a .thumbnail-info-container .rating-container {
     padding-top: 10px;
 }
 
+/*---MAIN - Populaires-------------------------------------------------------*/
 
+#populaires .title-icon-container,
+#populaires ul.landscape-thumbnails-container,
+#populaires ul.landscape-thumbnails-container li a,
+#populaires ul.landscape-thumbnails-container li a .thumbnail-info-container {
+    display: flex;
+}
+#populaires,
+#populaires ul.landscape-thumbnails-container,
+#populaires ul.landscape-thumbnails-container li,
+#populaires ul.landscape-thumbnails-container li a,
+#populaires ul.landscape-thumbnails-container li a .image-container img {
+    width: 100%;
+}
+#populaires ul.landscape-thumbnails-container,
+#populaires ul.landscape-thumbnails-container li a .image-container img,
+#populaires ul.landscape-thumbnails-container li a .thumbnail-info-container {
+    height: 100%;
+}
 #populaires {
     padding: 50px 30px;
     background-color: #F2F2F2;
-    width: 100%;
 }
 #populaires .title-icon-container {
-    display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
@@ -314,13 +346,9 @@ main {
     font-size: 1.5em;
 }
 #populaires ul.landscape-thumbnails-container {
-    display: flex;
-    width: 100%;
-    height: 100%;
     flex-direction: column;
 }
 #populaires ul.landscape-thumbnails-container li {
-    width: 100%;
     margin-top: 30px;
     border: 3px solid white;
     border-radius: 20px;
@@ -328,70 +356,68 @@ main {
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 #populaires ul.landscape-thumbnails-container li a {
-    width: 100%;
     height: 120px;
-    display: flex;
     justify-content: space-between;
 }
 #populaires ul.landscape-thumbnails-container li a .image-container {
     width: 40%;
 }
 #populaires ul.landscape-thumbnails-container li a .image-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 #populaires ul.landscape-thumbnails-container li a .thumbnail-info-container {
     width: 60%;
-    height: 100%;
-    display: flex;
     flex-direction: column;
     padding: 10px;
     background-color: white;
 }
 
-/*----------ACTIVITES------------*/
 
-#activites {
+/*----------ACTIVITES-------------------------------------------------------*/
+#activites ul.simplified-thumbnails-container,
+#activites ul.simplified-thumbnails-container li {
+    display: flex;
+}
+#activites,
+#activites ul.simplified-thumbnails-container,
+#activites ul.simplified-thumbnails-container li,
+#activites ul.simplified-thumbnails-container li a,
+#activites ul.simplified-thumbnails-container li a .image-container,
+#activites ul.simplified-thumbnails-container li a .image-container img,
+#activites ul.simplified-thumbnails-container li a p {
     width: 100%;
+}
+#activites ul.simplified-thumbnails-container li a,
+#activites ul.simplified-thumbnails-container li a .image-container,
+#activites ul.simplified-thumbnails-container li a .image-container img {
+    height: 100%;
+}
+#activites {
     padding: 50px 30px;
 }
 #activites ul.simplified-thumbnails-container {
-    width: 100%;
-    display: flex;
     flex-flow: column wrap;
-    /* padding-bottom: 50px; */
 }
 #activites ul.simplified-thumbnails-container li {
-    width: 100%;
     height: 200px;
-    display: flex;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     margin-top: 30px;
 }
-
 #activites ul.simplified-thumbnails-container li a {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 #activites ul.simplified-thumbnails-container li a .image-container {
-    width: 100%;
-    height: 100%;
     position: relative;
 }
 #activites ul.simplified-thumbnails-container li a .image-container img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 #activites ul.simplified-thumbnails-container li a p {
     padding: 10px;
     position: absolute;
-    width: 100%;
     background-color: white;
     z-index: 10;
     bottom: 0;
@@ -401,14 +427,13 @@ main {
     display: flex;
     flex-grow: 2;
     align-items: flex-end;
-/*     padding: 5px 0; */
 }
 .rating-container i {
     font-size: 0.8em;
 }
 
 
-/*-----------FOOTER------------------*/
+/*---FOOTER-------------------------------------------------------*/
 
 footer {
     width: 100%;
@@ -427,8 +452,11 @@ footer ul li {
 }
 
 
-/*-----------------------------------------------QUERIES------------------------------------------/*
-/*-------TABLET-----------*/
+/*----------------------------------------------------------------------------------
+---------------------------------MEDIA QUERIES--------------------------------------
+----------------------------------------------------------------------------------*/
+
+/*-------TABLET-------------------------------------------------------*/
 @media screen and (min-width: 768px) {
 
     .mobile-only {
@@ -439,6 +467,7 @@ footer ul li {
         display: flex;
     }
     
+    /*----HEADER-------------------------------------------------------*/
     header {
         flex-wrap: nowrap;
         justify-content: flex-end;
@@ -471,30 +500,25 @@ footer ul li {
     }
 
     
-    
-
-    /*----------SEARCH AND FILTER AREA------------*/
+    /*---SEARCH AND FILTER AREA-------------------------------------------------------*/
 
     #search-and-filter {
         padding: 30px 50px;
     }
-
     #search-and-filter form {
         margin: 20px 0 30px 0;
         width: auto;
     }
-
-    #search-and-filter form input {
+    #search-and-filter form input,
+    #search-and-filter form button.hidden-on-mobile {
         padding: 0 20px;
     }
-
     #search-and-filter form button.hidden-on-mobile {
         border: 0;
         background-color: #0065FC;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 20px;
         color: white;
         cursor: pointer;
     }
@@ -502,7 +526,6 @@ footer ul li {
         background-color: #DEEBFF;
         color: #0065FC;
     }
-
     #search-and-filter form button.mobile-only {
         display: none;
     }
@@ -511,36 +534,32 @@ footer ul li {
     #filter-container > p {
         width: auto;
     }
-
     .filter-option:nth-child(1) {
         margin-left: 20px;
     }
-
     .filter-option {
         margin: 0 20px 0 0;
-        transition: ease-in-out 300ms;
     }
     .filter-option:hover {
         border: 2px solid #0065FC;
-    }
-    .filter-option button i {
-        transition: ease-in-out 300ms;
     }
     .filter-option:hover button i {
         background-color: #0065FC;
         color: white;
     }
+    .filter-option,
+    .filter-option button i {
+        transition: ease-in-out 300ms;
+    }
 
 
-    /*----------HEBERGEMENTS------------*/
+    /*----MAIN-------------------------------------------------------*/
     
     main {
-        width: 100%;
         padding: 50px;
-        display: flex;
-        flex-direction: column;
     }
-        
+    
+    /*----MAIN - Hebergements-------------------------------------------------------*/
     #hebergements {
         padding: 50px;
         background-color: #F2F2F2;
@@ -557,7 +576,6 @@ footer ul li {
     #hebergements ul.portrait-thumbnails-container li {
         width: 30%;
         transition: ease-in-out 100ms;
-        transition: ease-in-out 100ms;
     }
     #hebergements ul.portrait-thumbnails-container li a {
         height: 100%;
@@ -568,7 +586,6 @@ footer ul li {
     #hebergements > a:hover {
         text-decoration: underline;
     }
-
     #hebergements ul.portrait-thumbnails-container li:hover {
         box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
@@ -576,12 +593,11 @@ footer ul li {
 
     
     
-    
+    /*----MAIN - Populaires-------------------------------------------------------*/
     #populaires {
         padding: 50px;
         margin-top: 50px;
         background-color: #F2F2F2;
-        width: 100%;
         border-radius: 20px;
     }
     #populaires ul.landscape-thumbnails-container li {
@@ -592,10 +608,7 @@ footer ul li {
     }
     
 
-    /*----------ACTIVITES------------*/
-    
-
-
+    /*----ACTIVITES-------------------------------------------------------*/
     #activites {
         padding: 0 50px;
     }
@@ -630,13 +643,8 @@ footer ul li {
         padding: 10px;
     }
     
-    /* #activites ul.simplified-thumbnails-container li:nth-child(3) {
-        order: -1;
-    } */
     
-    
-    /*-----------FOOTER------------------*/
-
+    /*----FOOTER-------------------------------------------------------*/
     footer {
         padding: 20px 50px 50px 50px;
         flex-direction: row;
@@ -651,7 +659,7 @@ footer ul li {
 
 
 
-/*--------DESKTOP----------------*/
+/*--------DESKTOP-------------------------------------------------------*/
 @media screen and (min-width: 1024px) {
 
     header {
@@ -663,13 +671,13 @@ footer ul li {
     }
 
 
-    /*----------HEBERGEMENTS------------*/
+    /*----MAIN-------------------------------------------------------*/
     
     main {
         flex-direction: row;
         align-items: stretch;
     }
-        
+    /*----MAIN - Hebergements-------------------------------------------------------*/   
     #hebergements {
         width: 70%;
     }
@@ -677,13 +685,12 @@ footer ul li {
         width: 30%;
     }
 
-    
+    /*----MAIN - Populaires-------------------------------------------------------*/
     #populaires {
         width: 30%;
         margin-top: 0;
         padding: 50px;
     }
-
     #populaires ul.landscape-thumbnails-container {
         padding: 15px 0;
     }
@@ -697,24 +704,12 @@ footer ul li {
     }
 
 
-    /* #activites ul.simplified-thumbnails-container {
-        height: 600px;
-    } */
-
-
-    #activites {
-        padding: 0 50px;
-    }
+    /*----ACTIVITES-------------------------------------------------------*/
     #activites ul.simplified-thumbnails-container {
         height: 600px;
-        flex-flow: column wrap;
-        align-content: space-between;
-        justify-content: space-between;
-        padding: 30px 0 50px 0;
     }
     #activites ul.simplified-thumbnails-container li {
         width: 23%;
-        margin-top: 0;
     }
     #activites ul.simplified-thumbnails-container li.full-height {
         height: 100%;
@@ -732,6 +727,5 @@ footer ul li {
         padding: 20px;
     }
 
-    
 }
 
