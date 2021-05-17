@@ -39,12 +39,16 @@ header > a:hover {
 }
 
 
-h3, h2, p {
+h3, h2, p, input, input::placeholder {
     color: black;
     font-family: "Raleway", sans-serif;
     font-size: 1.5em;
     line-height: 1.3em;
     padding-bottom: 5px;
+}
+
+input, input::placeholder {
+    font-size: 1.2em;
 }
 
 h3 {
@@ -164,8 +168,12 @@ nav ul li:hover a {
     background-color: #F2F2F2;
 }
 #search-and-filter form input {
-    width: auto;
+    width: 80%;
+    padding: 0 20px;
     font-weight: 700;
+}
+#search-and-filter form input:focus {
+    outline: none;
 }
 #search-and-filter form button.mobile-only {
     background-color: #0065FC;
@@ -258,7 +266,13 @@ main {
 }
 
 /*---MAIN - Hebergements-------------------------------------------------------*/
-
+#hebergements h2 {
+    padding: 0;
+    padding-bottom: 25px;
+}
+#hebergements > a {
+    padding-top: 15px;
+}
 #hebergements,
 #hebergements ul.portrait-thumbnails-container,
 #hebergements ul.portrait-thumbnails-container li a,
@@ -286,10 +300,10 @@ main {
     flex-flow: row wrap;
 }
 #hebergements ul.portrait-thumbnails-container {
-    padding: 30px 0 0 0;
+    padding: 0;
 }
 #hebergements ul.portrait-thumbnails-container li {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     border: 3px solid white;
     border-radius: 20px;
     overflow: hidden;
@@ -297,6 +311,7 @@ main {
 }
 #hebergements ul.portrait-thumbnails-container li a {
     background-color: white;
+    height: 200px;
 }
 #hebergements ul.portrait-thumbnails-container li a .image-container {
     height: 200px;
@@ -316,7 +331,10 @@ main {
 }
 
 /*---MAIN - Populaires-------------------------------------------------------*/
-
+#populaires h2 {
+    padding: 0;
+    padding-bottom: 25px;
+}
 #populaires .title-icon-container,
 #populaires ul.landscape-thumbnails-container,
 #populaires ul.landscape-thumbnails-container li a,
@@ -351,14 +369,16 @@ main {
     flex-direction: column;
 }
 #populaires ul.landscape-thumbnails-container li {
-    margin-top: 30px;
+    /* margin-top: 15px; */
+    margin-bottom: 15px;
     border: 3px solid white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 144px;
 }
 #populaires ul.landscape-thumbnails-container li a {
-    height: 120px;
+    height: 100%;
     justify-content: space-between;
 }
 #populaires ul.landscape-thumbnails-container li a .image-container {
@@ -401,12 +421,12 @@ main {
     flex-flow: column wrap;
 }
 #activites ul.simplified-thumbnails-container li {
-    height: 250px;
+    height: 190px;
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    margin-top: 30px;
+    margin-top: 24px;
 }
 #activites ul.simplified-thumbnails-container li a {
     overflow: hidden;
@@ -418,7 +438,7 @@ main {
     object-fit: cover;
 }
 #activites ul.simplified-thumbnails-container li a p {
-    padding: 10px;
+    padding: 20px 10px;
     position: absolute;
     background-color: white;
     z-index: 10;
@@ -536,11 +556,9 @@ footer ul li {
     #filter-container > p {
         width: auto;
     }
-    .filter-option:nth-child(1) {
-        margin-left: 20px;
-    }
+
     .filter-option {
-        margin: 0 20px 0 0;
+        margin: 10px 20px 0 0;
     }
     .filter-option:hover {
         border: 2px solid #0065FC;
@@ -577,10 +595,12 @@ footer ul li {
     }
     #hebergements ul.portrait-thumbnails-container li {
         width: 30%;
+        margin-bottom: 30px;
         transition: ease-in-out 100ms;
     }
     #hebergements ul.portrait-thumbnails-container li a {
         height: 100%;
+        max-height: 200%;
     }
     #hebergements ul.portrait-thumbnails-container li a .image-container {
         height: 130px;
@@ -606,6 +626,7 @@ footer ul li {
         border-radius: 20px;
     }
     #populaires ul.landscape-thumbnails-container li {
+        /* margin-top: 30px; */
         transition: ease-in-out 100ms;
     }
     #populaires ul.landscape-thumbnails-container li:hover {
@@ -648,16 +669,6 @@ footer ul li {
         padding: 10px;
     }
     
-    
-    /*----FOOTER-------------------------------------------------------*/
-    footer {
-        padding: 20px 50px 50px 50px;
-        flex-direction: row;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
    
 
 }
@@ -675,6 +686,13 @@ footer ul li {
         padding: 45px 35px;
     }
 
+    .filter-option {
+        margin: 0 20px 0 0;
+    }
+
+    .filter-option:nth-child(1) {
+        margin-left: 20px;
+    }
 
     /*----MAIN-------------------------------------------------------*/
     
@@ -682,6 +700,8 @@ footer ul li {
         flex-direction: row;
         align-items: stretch;
     }
+
+    
     /*----MAIN - Hebergements-------------------------------------------------------*/   
     #hebergements {
         width: 70%;
@@ -697,12 +717,14 @@ footer ul li {
         padding: 50px;
     }
     #populaires ul.landscape-thumbnails-container {
-        padding: 15px 0;
+        /* padding: 15px 0; */
+        justify-content: space-between;
+        padding-bottom: 50px;
     }
     #populaires ul.landscape-thumbnails-container li {
         flex-basis: 100%;
         flex-grow: 1;
-        margin: 15px 0;
+        max-height: 144px;
     }
     #populaires ul.landscape-thumbnails-container li a {
         height: 100%;
@@ -730,6 +752,16 @@ footer ul li {
     }
     #activites ul.simplified-thumbnails-container li a p {
         padding: 20px;
+    }
+
+    /*----FOOTER-------------------------------------------------------*/
+    footer {
+        padding: 20px 50px 50px 50px;
+        flex-direction: row;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
     }
 
 }
