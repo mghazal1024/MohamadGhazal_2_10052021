@@ -23,8 +23,8 @@ a {
     font-weight: 500;
     text-decoration: none;
     color: #000000;
-    font-size: 1em;
-    line-height: 1.1em;
+    font-size: 1rem;
+    line-height: 1.1rem;
 }
 .bold-link {
     font-weight: 700;
@@ -42,23 +42,23 @@ header > a:hover {
 h3, h2, p, input, input::placeholder {
     color: black;
     font-family: "Raleway", sans-serif;
-    font-size: 1.5em;
-    line-height: 1.3em;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
     padding-bottom: 5px;
 }
 
 input, input::placeholder {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 h3 {
-    font-size: 1.3em;
-    line-height: 1.1em;
+    font-size: 1.3rem;
+    line-height: 1.1rem;
 }
 
 p, strong, p.small-p {
-    font-size: 1.1em;
-    line-height: 1.1em;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
     font-weight: 300;
 }
 strong {
@@ -66,8 +66,8 @@ strong {
 }
 
 p.small-p {
-    font-size: 0.9em;
-    line-height: 1em;
+    font-size: 0.9rem;
+    line-height: 1rem;
 }
 
 
@@ -218,8 +218,8 @@ nav ul li:hover a {
     border: 0;
     cursor: pointer;
     padding-right:15px;
-    font-size: 1.1em;
-    line-height: 1.4em;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
     font-weight: 700;
 }
 .filter-option button i {
@@ -247,7 +247,7 @@ nav ul li:hover a {
     justify-content: center;
     color: #0065FC;
     border-radius: 13px;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 .additional-info-container p {
     margin-left: 10px;
@@ -363,7 +363,7 @@ main {
     justify-content: space-between;
 }
 #populaires .title-icon-container i {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 #populaires ul.landscape-thumbnails-container {
     flex-direction: column;
@@ -451,7 +451,7 @@ main {
     align-items: flex-end;
 }
 .rating-container i {
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 
