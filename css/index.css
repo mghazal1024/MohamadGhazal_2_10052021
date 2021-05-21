@@ -42,8 +42,8 @@ header > a:hover {
 h3, h2, p, input, input::placeholder {
     color: black;
     font-family: "Raleway", sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.3rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
     padding-bottom: 5px;
 }
 
@@ -57,7 +57,7 @@ h3 {
 }
 
 p, strong, p.small-p {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     line-height: 1.1rem;
     font-weight: 300;
 }
@@ -272,6 +272,8 @@ main {
 }
 #hebergements > a {
     padding-top: 15px;
+    font-size: 1.1rem;
+    padding-top: 20px;
 }
 #hebergements,
 #hebergements ul.portrait-thumbnails-container,
@@ -295,7 +297,7 @@ main {
     height: 100%;
 }
 #hebergements {
-    padding: 50px 30px;
+    padding: 40px 20px 30px 20px;
     order: 1;
     flex-flow: row wrap;
 }
@@ -304,7 +306,7 @@ main {
 }
 #hebergements ul.portrait-thumbnails-container li {
     margin-bottom: 15px;
-    border: 3px solid white;
+    border: 4px solid white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -355,7 +357,7 @@ main {
     height: 100%;
 }
 #populaires {
-    padding: 50px 30px;
+    padding: 50px 20px 30px 20px;
     background-color: #F2F2F2;
 }
 #populaires .title-icon-container {
@@ -371,7 +373,7 @@ main {
 #populaires ul.landscape-thumbnails-container li {
     /* margin-top: 15px; */
     margin-bottom: 15px;
-    border: 3px solid white;
+    border: 4px solid white;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -576,12 +578,13 @@ footer ul li {
     /*----MAIN-------------------------------------------------------*/
     
     main {
-        padding: 50px;
+        /* padding: 50px; */
+        padding: 0 50px 60px 50px;
     }
     
     /*----MAIN - Hebergements-------------------------------------------------------*/
     #hebergements {
-        padding: 50px;
+        padding: 40px;
         background-color: #F2F2F2;
         width: 100%;
         order: 0;
@@ -607,6 +610,7 @@ footer ul li {
     }
     #hebergements > a {
         align-self: flex-end;
+        padding-top: 0px;
     }
     #hebergements > a:hover {
         text-decoration: underline;
@@ -620,7 +624,7 @@ footer ul li {
     
     /*----MAIN - Populaires-------------------------------------------------------*/
     #populaires {
-        padding: 50px;
+        padding: 40px;
         margin-top: 50px;
         background-color: #F2F2F2;
         border-radius: 20px;
@@ -643,7 +647,7 @@ footer ul li {
         flex-flow: column wrap;
         align-content: space-between;
         justify-content: space-between;
-        padding: 30px 0 50px 0;
+        padding: 30px 0 60px 0;
     }
     #activites ul.simplified-thumbnails-container li {
         width: calc(50% - 10px);
@@ -704,17 +708,17 @@ footer ul li {
     
     /*----MAIN - Hebergements-------------------------------------------------------*/   
     #hebergements {
-        width: 70%;
+        width: 67.5%;
     }
     #hebergements ul.portrait-thumbnails-container li {
-        width: 30%;
+        width: 30.5%;
     }
 
     /*----MAIN - Populaires-------------------------------------------------------*/
     #populaires {
-        width: 30%;
+        width: 32.5%;
         margin-top: 0;
-        padding: 50px;
+        padding: 40px;
     }
     #populaires ul.landscape-thumbnails-container {
         /* padding: 15px 0; */
@@ -725,6 +729,7 @@ footer ul li {
         flex-basis: 100%;
         flex-grow: 1;
         max-height: 144px;
+        margin-bottom: 0px;
     }
     #populaires ul.landscape-thumbnails-container li a {
         height: 100%;
@@ -736,7 +741,7 @@ footer ul li {
         height: 600px;
     }
     #activites ul.simplified-thumbnails-container li {
-        width: 23%;
+        width: 22.5%;
     }
     #activites ul.simplified-thumbnails-container li.full-height {
         height: 100%;
