@@ -271,9 +271,8 @@ main {
     padding-bottom: 25px;
 }
 #hebergements > a {
-    padding-top: 15px;
+    padding-top: 10px;
     font-size: 1.1rem;
-    padding-top: 20px;
 }
 #hebergements,
 #hebergements ul.portrait-thumbnails-container,
@@ -305,6 +304,7 @@ main {
     padding: 0;
 }
 #hebergements ul.portrait-thumbnails-container li {
+    max-height: 200px;
     margin-bottom: 15px;
     border: 4px solid white;
     border-radius: 20px;
@@ -421,6 +421,7 @@ main {
 }
 #activites ul.simplified-thumbnails-container {
     flex-flow: column wrap;
+    margin-top: 30px;
 }
 #activites ul.simplified-thumbnails-container li {
     height: 190px;
@@ -440,11 +441,16 @@ main {
     object-fit: cover;
 }
 #activites ul.simplified-thumbnails-container li a p {
-    padding: 20px 10px;
+    /* padding: 20px 10px; */
     position: absolute;
     background-color: white;
     z-index: 10;
     bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
 }
 
 .rating-container {
@@ -608,10 +614,10 @@ footer ul li {
     #hebergements ul.portrait-thumbnails-container li a .image-container {
         height: 130px;
     }
-    #hebergements > a {
+    /* #hebergements > a {
         align-self: flex-end;
         padding-top: 0px;
-    }
+    } */
     #hebergements > a:hover {
         text-decoration: underline;
     }
@@ -640,14 +646,15 @@ footer ul li {
 
     /*----ACTIVITES-------------------------------------------------------*/
     #activites {
-        padding: 0 50px;
+        /* padding: 0 50px; */
+        padding: 0 50px 50px 50px;
     }
     #activites ul.simplified-thumbnails-container {
         height: 800px;
         flex-flow: column wrap;
         align-content: space-between;
         justify-content: space-between;
-        padding: 30px 0 60px 0;
+        /* padding: 30px 0 60px 0; */
     }
     #activites ul.simplified-thumbnails-container li {
         width: calc(50% - 10px);
@@ -669,9 +676,9 @@ footer ul li {
     #activites ul.simplified-thumbnails-container li.one-height {
         height: calc(20% - 20px);
     }
-    #activites ul.simplified-thumbnails-container li a p {
+    /* #activites ul.simplified-thumbnails-container li a p {
         padding: 10px;
-    }
+    } */
     
    
 
@@ -738,7 +745,8 @@ footer ul li {
 
     /*----ACTIVITES-------------------------------------------------------*/
     #activites ul.simplified-thumbnails-container {
-        height: 600px;
+        /* height: 600px; */
+        height: 450px;
     }
     #activites ul.simplified-thumbnails-container li {
         width: 22.5%;
@@ -747,16 +755,19 @@ footer ul li {
         height: 100%;
     }
     #activites ul.simplified-thumbnails-container li.half-height {
-        height: calc(50% - 20px);
+        /* height: calc(50% - 20px); */
+        height: 205px;
     }
     #activites ul.simplified-thumbnails-container li.two-height {
-        height: calc(60% - 20px);
+        /* height: calc(60% - 20px); */
+        height: 240px;
     }
     #activites ul.simplified-thumbnails-container li.one-height {
-        height: calc(40% - 20px);
+        /* height: calc(40% - 20px); */
+        height: 170px;
     }
     #activites ul.simplified-thumbnails-container li a p {
-        padding: 20px;
+        /* padding: 20px; */
     }
 
     /*----FOOTER-------------------------------------------------------*/
